@@ -1,0 +1,23 @@
+{
+    "Version": "2012-10-17",
+    "Id": "SampleAuthorizationPolicy",
+    "Statement": [
+        {
+            "Sid": "AuthorizeMarketer",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::431837896730:root"
+            },
+            "Action": [
+                "SES:SendEmail",
+                "SES:SendRawEmail"
+            ],
+            "Resource": "arn:aws:ses:ap-southeast-1:075343395323:identity/protoslabs.sg",
+            "Condition": {
+                "StringLike": {
+                    "ses:FromAddress": "*@protoslabs.sg"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+Create an EC2 instance: Amazon Linux 2 AMI (HVM) - Kernel 5.10, SSD Volume Type
+Copy Private IPv4 address
+Go to RDS, click on database, select Security Groups -> Inbound rules
+Edit Inbound rules -> Paste IPv4 address, select type = PostgreSQL
+
+Open up PgAdmin4 
